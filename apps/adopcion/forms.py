@@ -34,7 +34,7 @@ class PersonaForm(forms.ModelForm):
             'telefono': forms.TextInput(attrs={'class':'form-control'}),
             'email': forms.EmailInput(attrs={'class':'form-control'}),
             'domicilio': forms.TextInput(attrs={'class':'form-control'}),
-            'personaEPN': forms.TextInput(attrs={'class':'form-control'}),
+            'personaEPN': forms.NullBooleanSelect(),
         }
 
 class SolicitudForm(forms.ModelForm):

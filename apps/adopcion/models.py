@@ -8,7 +8,7 @@ class Persona(models.Model):
     edad=models.IntegerField()
     telefono=models.CharField(max_length=15)
     email=models.CharField(max_length=30)
-    domicilio=models.TextField()
+    domicilio=models.CharField(max_length=30)
     personaEPN=models.BooleanField()
 
     def __str__(self):

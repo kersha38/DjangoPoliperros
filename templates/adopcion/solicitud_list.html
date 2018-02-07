@@ -20,8 +20,8 @@
             <td>{{ solicitud.numero_mascotas }}</td>
             <td>{{ solicitud.razones }}</td>
             <td>
-                <a class="btn btn-primary" href="{% url 'mascotaEditar' mascota.id %}">Editar</a>
-                <a class="btn btn-danger" href="{% url 'mascotaEliminar' mascota.id %}">Eliminar</a>
+                <a class="btn btn-primary" href="{% url 'solicitudEdit' solicitud.id %}">Editar</a>
+                <a class="btn btn-danger" href="{% url 'solicitudBorrar' solicitud.id %}">Eliminar</a>
             </td>
         </tr>
         {% endfor %}
