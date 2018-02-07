@@ -102,3 +102,4 @@ ENV/
 
 .idea
 envDJ
+apps/adopcion/migrations

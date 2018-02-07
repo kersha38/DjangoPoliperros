@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table bordered">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Nombre</td>
+            <td>Sexo</td>
+            <td>Edad</td>
+            <td>Fecha de rescate</td>
+            <td>Estado actual</td>
+            <td>Adoptante</td>
+            <td>Acciones</td>
+        </tr>
+    <tbody>
+        {% if object_list %}
+        {% for mascota in object_list %}
+        <tr>
+            <td>{{ mascota.id }}</td>
+            <td>{{ mascota.nombre }}</td>
+            <td>{{ mascota.sexo }}</td>
+            <td>{{ mascota.edad_aproximada }}</td>
+            <td>{{ mascota.fecha_ingreso }}</td>
+            <td>{{ mascota.estado_Actual }}</td>
+            <td>{{ mascota.persona.nombre }} {{ mascota.persona.apellido }}</td>
+            <td>
+                <a class="btn btn-primary" href="{% url 'mascotaEditar' mascota.id %}">Editar</a>
+                <a class="btn btn-danger" href="{% url 'mascotaEliminar' mascota.id %}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h1>No existen registros de mascotas</h1>
+        {% endif %}
+    </tbody>
+    </thead>
+
+</table>
+
+{% endblock %}
