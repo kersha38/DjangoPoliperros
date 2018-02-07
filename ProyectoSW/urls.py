@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.views import login
 
 
 urlpatterns = [
@@ -22,4 +23,5 @@ urlpatterns = [
     url(r'^mascota/', include('apps.mascota.urls')),
     url(r'^adopciones/', include('apps.adopcion.urls')),
     url(r'^usuario/', include('apps.usuario.urls')),
+    url(r'^$', login, {'template_name':'usuario/index.html'}, name='login'),
 ]
