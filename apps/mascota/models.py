@@ -5,7 +5,7 @@ class Medicina(models.Model):
     medicina=models.CharField(max_length=20)
 
     def __str__(self):
-        return  self.medicina
+        return  str(self.medicina)
 
 # Create your models here.
 class Mascota(models.Model):
@@ -18,7 +18,7 @@ class Mascota(models.Model):
     persona=models.ForeignKey(Persona,null=True,blank=True,on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.nombre+' D: '+self.persona
+        return str(self.nombre)
 
 class Visita_Medica(models.Model):
     mascota=models.ForeignKey(Mascota,null=True,blank=True,on_delete=models.CASCADE)
@@ -28,4 +28,4 @@ class Visita_Medica(models.Model):
     medicina=models.ForeignKey(Medicina,null=True,blank=True,on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.fecha)+' M: '+self.medicina
+        return str(str(self.fecha)+' M: '+self.medicina)
