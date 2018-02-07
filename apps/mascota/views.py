@@ -60,7 +60,6 @@ class MascotaUpdate(UpdateView):
 
 class MascotaDelete(DeleteView):
     model = Mascota
-    form_class = MascotaForm
-    template_name = 'mascota/mascota_form.html'
+    template_name = 'mascota/mascota_delete.html'
     success_url = reverse_lazy('mascotaListar')
 
