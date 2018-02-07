@@ -1,0 +1,72 @@
+{% extends 'base/base.html' %}
+{% block title %}Registrar Solicitud {% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.nombre.name }}">{{ formPers.nombre.label }}</label>
+                {{ formPers.nombre }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.apellido.name }}">{{ formPers.apellido.label }}</label>
+                {{ formPers.apellido }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.cedula.name }}">{{ formPers.cedula.label }}</label>
+                {{ formPers.cedula }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.edad.name }}">{{ formPers.edad.label }}</label>
+                {{ formPers.edad }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.telefono.name }}">{{ formPers.telefono.label }}</label>
+                {{ formPers.telefono }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.email.name }}">{{ formPers.email.label }}</label>
+                {{ formPers.email }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.domicilio.name }}">{{ formPers.domicilio.label }}</label>
+                {{ formPers.domicilio }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ formPers.personaEPN.name }}">{{ formPers.personaEPN.label }}</label>
+                {{ formPers.personaEPN }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ form.numero_mascotas.name }}">{{ formPers.numero_mascotas.label }}</label>
+                {{ formPers.numero_mascotas }}
+            </div>
+        </div>
+        <div class="col-md-5 col-md-offset-2">
+            <div class="form-group">
+                <label for="{{ form.razones.name }}">{{ formPers.razones.label }}</label>
+                {{ formPers.razones }}
+            </div>
+        </div>
+    </div>
+
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
