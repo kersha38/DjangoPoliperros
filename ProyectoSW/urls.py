@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^adopciones/', include('apps.adopcion.urls')),
     url(r'^usuario/', include('apps.usuario.urls')),
     url(r'^$', login, {'template_name':'index.html'}, name='login'),
+    url(r'^galeria/', include('apps.galeria.urls')),
 ]

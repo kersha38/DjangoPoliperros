@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.adopcion',
     'apps.mascota',
     'apps.usuario',
+    'apps.galeria',
 ]
 
 MIDDLEWARE_CLASSES = [
