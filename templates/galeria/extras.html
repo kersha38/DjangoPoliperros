@@ -1,4 +1,6 @@
+
 {% load staticfiles %}
+
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +12,12 @@
 
 </head>
 
-<body>
+<body style="background-color:Teal;">
 
     <div class="container" align="center">
-        <h1>Galeria</h1>
+        <h1 >
+            <font font color="Maroon">Conoce a nuestros amigos</font>
+        </h1>
         <hr>
     <div class="slideShow">
 
@@ -31,12 +35,23 @@
     <script src="{% static 'js/slideShow.js' %}"></script>
     <script>
         $.slideShow({
-            slides:["{% static 'img/p1.jpg'%}","{% static 'img/p2.jpg'%}","{% static 'img/p3.jpg'%}","{% static 'img/p4.jpg'%}","{% static 'img/p5.jpg'%}","{% static 'img/p6.jpg'%}"],
+            slides:["{% static 'img/black.jpg'%}","{% static 'img/grandote.jpg'%}","{% static 'img/manu.jpg'%}","{% static 'img/miel.jpg'%}","{% static 'img/morrita.jpg'%}","{% static 'img/nala.jpg'%}",
+            "{% static 'img/negrito.jpg'%}","{% static 'img/nico.jpg'%}","{% static 'img/princesa.jpg'%}","{% static 'img/valentin.jpg'%}"],
             intervalo: 2000,
             velocidad: 1200
         });
     </script>
 
+    <h3>
+        <center><font color =Maroon>No compres, !Adopta a un amigo¡</font></center>
+
+    </h3>
+
+    <td>
+        <center><a class="btn btn-primary" href="http://localhost:8000/adopciones/solicitud/nueva/">Adoptar</a></center>
+
+    </td>
+
+
 </body>
 
-</html>
