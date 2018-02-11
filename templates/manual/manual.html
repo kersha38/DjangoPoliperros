@@ -1,4 +1,6 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,36 +9,51 @@
 <body>
 {% block content %}
 <h2 >
+    <img src="{% static 'img/encabezado.jpg'%}" align="center" border="1">
+
+    <br>
+    <br>
+
     <P ALIGN=center>¿Quienés somos?
 </h2>
 
     <h6 style="text-align:justify">
+
         <font color=" black">
             <P ALIGN=center>
-        <br>Somos un grupo de estudiantes de la Escuela Politécnica Nacional
-        <br>que partiendo del deber moral de ayudar al prójimo, buscamos
-        <br>que el resto de la comunidad se una a esta iniciativa y con su ayuda
-        <br>se pueda dar un hogar a los mejores amigos del ser humano, los
-        <br>perros que se encuentran en las inmediaciones de la universidad.
+        <br>Somos un grupo de estudiantes de la Escuela Politécnica Nacional que partiendo del deber moral
+        <br>de ayudar al prójimo, buscamos que el resto de la comunidad se una a esta iniciativa y con su
+        <br> ayuda se pueda dar un hogar a los mejores amigos del ser humano, los perros que se encuentran
+        <br> en las inmediaciones de la universidad.
+        <br>
          </font>
     </h6>
+<br>
 
 <h2 >
     <P ALIGN=center>¿Cómo lo hacemos?
 </h2>
+<div>
+
         <h6 style="text-align:justify">
         <font color=" black">
             <P ALIGN=center>
-        <br>A través de una aplicación web interactiva con la comunidad,
-        <br>podremos aumentar las posibilidades de que un perro sea
-        <br>adoptado o tenga un hogar temporal, incluso las personas
-        <br>podrán realizar contribuciones ya sea alimenticias u económicas.
+        <br>A través de una aplicación web interactiva con la comunidad, podremos aumentar las posibilidades
+        <br> de que un perro sea adoptado o tenga un hogar temporal, incluso las personas podrán realizar
+        <br> contribuciones ya sea alimenticias u económicas.
         <br>
-        <br>FEPON interesada por los Poli Perros, decide actuar, buscar óptimas
-        <br>soluciones con fin de garantizar su bienestar animal y se
-        <br>conforma el Equipo Peludito.
+        <br>FEPON interesada por los Poli Perros, decide actuar, buscar óptimas soluciones con fin de garantizar
+        <br> su bienestar animal y se conforma el Equipo Poliperros
          </font>
+            <br>
+            <br>
+            <br>
+            <br>
+<img src="{% static 'img/adopcion.jpg'%}" align="center" border="1">
     </h6>
+    </div>
+
+
 
 {% endblock %}
 
