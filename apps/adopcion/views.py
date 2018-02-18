@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import  HttpResponse, HttpResponseRedirect
-from django.views.generic import CreateView, ListView,DeleteView, UpdateView
+from django.views.generic import CreateView, ListView,DeleteView, UpdateView\
+    ,TemplateView
 from django.core.urlresolvers import reverse_lazy
 from apps.adopcion.models import Persona, Solicitud
 from apps.adopcion.forms import PersonaForm, SolicitudForm
+from django.core.mail import send_mail
 
 def index(request):
     return HttpResponse('Page: Adopciones')
@@ -73,6 +75,24 @@ class SolicitudUpdate(UpdateView):
 			return HttpResponseRedirect(self.get_success_url())
 		else:
 			return HttpResponseRedirect(self.get_success_url())
+
+def atenderSolicitud(request,pk):
+
+    if request.method== 'POST':
+        texto = request.POST['texto']
+        emailR = Solicitud.objects.get(id=pk).persona.email
+        send_mail(
+            'Respuesta Adopcion',
+            texto,
+            'proyecto.libres001@gmail.com',
+            [emailR],  # recuperar email
+            fail_silently=False,
+        )
+        object_list=Solicitud.objects.all()
+        return render(request,'adopcion/solicitud_list.html',{'object_list':object_list})
+    else:
+        return render(request,'adopcion/atender.html')
+
 
 class solicitudDelete(DeleteView):
     model = Solicitud

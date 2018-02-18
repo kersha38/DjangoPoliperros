@@ -135,5 +135,9 @@ STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 
 LOGIN_REDIRECT_URL = reverse_lazy('solicitudList')
 
-
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'proyecto.libres001@gmail.com'
+EMAIL_HOST_PASSWORD = 'ProyectoLibres001'
 #<!--Esto incluye una pagina dentro de otra{% include 'base/archivo.html' %}-->

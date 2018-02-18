@@ -14,6 +14,11 @@ class Persona(models.Model):
     def __str__(self):
         return self.nombre+' '+self.apellido
 
+    class Meta:
+        permissions = (
+            ("esPersonalAutorizado", "Puede añadir mascotas y manejar solicitudes"),
+        )
+
 class Solicitud(models.Model):
     persona = models.ForeignKey(Persona, null=True, blank=True)
     numero_mascotas = models.IntegerField()

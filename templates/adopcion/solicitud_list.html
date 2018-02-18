@@ -23,6 +23,7 @@
                 <a class="btn btn-primary" href="{% url 'solicitudEdit' solicitud.id %}">Editar</a>
                 <a class="btn btn-danger" href="{% url 'solicitudBorrar' solicitud.id %}">Eliminar</a>
             </td>
+            <td><a class="btn btn-secondary" href="{% url 'solicitudAtender' solicitud.id %}">Atender</a></td>
         </tr>
         {% endfor %}
 

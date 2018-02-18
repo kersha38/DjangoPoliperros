@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from apps.adopcion.views import index, SolicitudList, SolicitudCreate\
-    ,solicitudDelete,SolicitudUpdate
+    ,solicitudDelete,SolicitudUpdate,atenderSolicitud
 
 urlpatterns = [
     url(r'^$', index),
@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^solicitud/nueva/$', SolicitudCreate.as_view(), name='solicitudCrear'),
     url(r'^solicitud/borrar/(?P<pk>\d+)/$', solicitudDelete.as_view(), name='solicitudBorrar'),
     url(r'^solicitud/editar/(?P<pk>\d+)/$', SolicitudUpdate.as_view(), name='solicitudEdit'),
+    url(r'^solicitud/atender/(?P<pk>\d+)/$', atenderSolicitud, name='solicitudAtender'),
 ]
