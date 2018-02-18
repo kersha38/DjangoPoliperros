@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.usuario',
     'apps.galeria',
     'apps.manual',
+    'apps.contacto'
 ]
 
 MIDDLEWARE_CLASSES = [

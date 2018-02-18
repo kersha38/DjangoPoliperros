@@ -6,21 +6,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body background="DarkGreen">
 {% block content %}
+<img src="{% static 'img/enca.jpg'%}" align="center" border="1">
 <h2 >
-    <img src="{% static 'img/encabezado.jpg'%}" align="center" border="1">
+
 
     <br>
     <br>
 
-    <P ALIGN=center>¿Quienés somos?
+   <img src="{% static 'img/poliperros1.jpg'%}" align="right" border="2">
+    <font color="black">¿Quienés somos?</font>
 </h2>
 
     <h6 style="text-align:justify">
 
         <font color=" black">
-            <P ALIGN=center>
         <br>Somos un grupo de estudiantes de la Escuela Politécnica Nacional que partiendo del deber moral
         <br>de ayudar al prójimo, buscamos que el resto de la comunidad se una a esta iniciativa y con su
         <br> ayuda se pueda dar un hogar a los mejores amigos del ser humano, los perros que se encuentran
@@ -31,31 +32,56 @@
 <br>
 
 <h2 >
-    <P ALIGN=center>¿Cómo lo hacemos?
+    <font color="black">¿Cómo lo hacemos?</font>
 </h2>
-<div>
+<h6 style="text-align:justify"><font color=" black">
 
-        <h6 style="text-align:justify">
-        <font color=" black">
-            <P ALIGN=center>
         <br>A través de una aplicación web interactiva con la comunidad, podremos aumentar las posibilidades
         <br> de que un perro sea adoptado o tenga un hogar temporal, incluso las personas podrán realizar
         <br> contribuciones ya sea alimenticias u económicas.
         <br>
         <br>FEPON interesada por los Poli Perros, decide actuar, buscar óptimas soluciones con fin de garantizar
         <br> su bienestar animal y se conforma el Equipo Poliperros
-         </font>
+         </font></h6>
+
+
             <br>
             <br>
             <br>
             <br>
-<img src="{% static 'img/adopcion.jpg'%}" align="center" border="1">
-    </h6>
-    </div>
+            <br>
 
 
 
-{% endblock %}
+<h2 >
+    <font color="black">Proceso de adopción</font>
+       <br>
+</h2>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/wPhgqCPsN7k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="right"></iframe>
+            <br>
+            <br>
+
+             <h5 style="text-align:justify">
+            <img src="{% static 'img/p1.jpg'%}" align="center" border="1" style="text-align:justify"><font color=" black">Ir a la galeria para escoger un perrito</font>
+
+        <br>
+    <img src="{% static 'img/p2.jpg'%}" align="center" border="1" style="text-align:justify"><font color=" black"> Llenar el formulario de adopcion</font>
+
+        <br>
+    <img src="{% static 'img/p3.jpg'%}" align="center" border="1" style="text-align:justify"><font color=" black">Enviar el formulario</font>
+
+        <br>
+    <img src="{% static 'img/p4.jpg'%}" align="center" border="1" style="text-align:justify"><font color="black">Esperar la respuesta por via email</font>
+
+        <br>
+    <img src="{% static 'img/p5.jpg'%}" align="center" border="1" style="text-align:justify"><font color="black">Asistir a la entrevista</font>
+
+        <br>
+    <img src="{% static 'img/p6.jpg'%}" align="center" border="1" style="text-align:justify"><font color="black">Confirmar la adopcion de un perro</font>
+</h5>
+    {% endblock %}
+
+
 
 
 </body>
