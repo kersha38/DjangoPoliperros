@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from apps.mascota.views import index, mascota_crear, mascota_list, mascota_edit, mascota_delete, \
-    MascotaList, MascotaCreate, MascotaUpdate, MascotaDelete
+    MascotaList, MascotaCreate, MascotaUpdate, MascotaDelete,visita_crear,VisitaCreate,VistasList,VisitaUpdate,VisitaDelete
 
 urlpatterns = [
     url(r'^$', index, name='index'),
@@ -12,4 +12,8 @@ urlpatterns = [
     url(r'^editar/(?P<pk>\d+)/$', MascotaUpdate.as_view(), name='mascotaEditar'),
     #url(r'^eliminar/(?P<id_mascota>\d+)/$', mascota_delete, name='mascotaEliminar'),
     url(r'^eliminar/(?P<pk>\d+)/$', MascotaDelete.as_view(), name='mascotaEliminar'),
+    url(r'^nuevaVisita/$', VisitaCreate.as_view(), name='visitaCrear'),#mediante clases
+    url(r'^listarVisitas/$', VistasList.as_view(), name='visitaListar'), #mediante clase
+    url(r'^editarvisita/(?P<pk>\d+)/$', VisitaUpdate.as_view(), name='visitaEditar'),
+    url(r'^eliminarVisita/(?P<pk>\d+)/$', VisitaDelete.as_view(), name='visitaEliminar'),
 ]
