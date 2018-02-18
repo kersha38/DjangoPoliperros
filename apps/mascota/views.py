@@ -2,8 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import  HttpResponse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
-from apps.mascota.forms import MascotaForm
-from apps.mascota.models import Mascota
+from apps.mascota.forms import MascotaForm ,VisitaMedicaForm
+from apps.mascota.models import Mascota,Visita_Medica
 # Create your views here.
 
 def index(request):
@@ -63,3 +63,34 @@ class MascotaDelete(DeleteView):
     template_name = 'mascota/mascota_delete.html'
     success_url = reverse_lazy('mascotaListar')
 
+def visita_crear(request):
+    if request.method=='POST':
+        form= VisitaMedicaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('visitaListar')
+    else:
+        form=VisitaMedicaForm()
+    return render(request,'mascota/visita_medica.html',{'form':form})
+
+class VisitaCreate(CreateView):
+    model = Visita_Medica
+    form_class = VisitaMedicaForm
+    template_name = 'mascota/visita_medica.html'
+    success_url = reverse_lazy('visitaListar') #es resolver de paginas, si fue bien  o no
+
+class VistasList(ListView):
+    model = Visita_Medica
+    template_name = 'mascota/visita_lista.html'
+
+
+class VisitaUpdate(UpdateView):
+    model = Visita_Medica
+    form_class = VisitaMedicaForm
+    template_name = 'mascota/visita_medica.html'
+    success_url = reverse_lazy('visitaListar')
+
+class VisitaDelete(DeleteView):
+    model = Visita_Medica
+    template_name = 'mascota/visita_delete.html'
+    success_url = reverse_lazy('visitaListar')
