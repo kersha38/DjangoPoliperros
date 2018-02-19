@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+<body background="DarkGreen">
+{% block content %}
+
+
+<center><table border="2px" bgcolor="PaleGreen">
+    <tr>
+
+<td><form method="post">
+            <h2>Formulario de contacto</h2>
+	{% csrf_token %}
+	{{ form.as_p }}
+
+	<button type="submit">Enviar</button>
+    </form>
+        </td>
+
+        <td>
+            <h2>Informacion del contacto</h2>
+            <br>
+
+        <h5><font color="black">Address:</font></h5> Escuela Politénica Nacional
+            <br>
+            <br>
+        <h5><font color="black">E-mail:</font></h5> poliperrosepn@gmail.com
+            <br>
+            <br>
+        <h5><font color="black">Phone: </font> </h5>  Movil: 0987931110
+            <br>
+            <br>
+            <br>
+        <img src="{% static 'img/buho.jpg'%}" align="center" border="2">
+        <img src="{% static 'img/fepon.jpg'%}" align="center" border="2">
+            <br>
+            <br>
+            <img src="{% static 'img/perropoli.jpg'%}" align="center" border="2">
+
+        </td>
+    </tr>
+    </table></center>
+{% endblock %}
+</body>
+
+
