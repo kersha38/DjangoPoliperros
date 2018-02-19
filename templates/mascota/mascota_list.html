@@ -30,6 +30,7 @@
                 <a class="btn btn-primary" href="{% url 'mascotaEditar' mascota.id %}">Editar</a>
                 <a class="btn btn-danger" href="{% url 'mascotaEliminar' mascota.id %}">Eliminar</a>
                 <a class="btn btn-danger" href="{% url 'visitaCrear'%}">Agregar visita medica</a>
+                <a class="btn btn-danger" href="{% url 'visitaListar' mascota.id %}">Ver historial médico</a>
             </td>
         </tr>
         {% endfor %}
