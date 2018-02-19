@@ -16,7 +16,7 @@ class contactoForm(forms.ModelForm):
             'nombre': 'Nombre',
             'email':'Email',
             'asunto':'Asunto',
-            'mensaje':'Mnesaje',
+            'mensaje':'Mensaje',
 
                   }
 
