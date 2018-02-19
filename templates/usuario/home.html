@@ -1,0 +1,207 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/style_home.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.css'%}" >
+	<link rel="stylesheet" href="{% static 'css/responsive.css'%}" >
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 main-slider">
+            <div class="slide-text">
+                <br><br>
+                <h1>POLIPERROS SAGA</h1>
+                    <br>
+                    <p style="font-size: 18px;">Las mascotas merecen tanto cuidado y amor como las personas, dales una oportunidad, adóptalos, ámalos, cuídalos!</p>
+                    <br>
+                    <p style="font-size: 18px;">Bienvenido a nuestro sito, navega, conoce a nuestros perros y anímate, adopta a un amigo de 4 patas!</p>
+                    <br><br>
+                    <a href="/" class="btn btn-common">SIGN IN</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/brand.jpg'%}" height=99% width=95% class="slider-house" alt="slider image">
+        </div>
+    </div>
+
+    <div class="container">
+        <br><br><br><br>
+        <h5>Cuidados para tu mascota</h5>
+        <div class="row">
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="{% static 'img/comida.jpg'%}" width=200px  alt="">
+                    </div>
+                    <h2>Alimentación</h2>
+                    <p>Según la edad: 3 veces al día si es un cachorro, 2 o incluso 1 si es un perro adulto y siempre
+                        tendremos un poco de agua fresca en un recipiente para que el perro esté hidratado,
+                        Debes darle un pienso de calidad, nutritivo, y acorde a la edad del perro para que ingiera todos los nutrientes
+                        necesarios.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                        <img src="{% static 'img/higiene.jpg'%}" alt="">
+                    </div>
+                    <h2>Higiene</h2>
+                    <p>A los perros no les suele gustar el agua, y si lo cepillas a diario para que tenga el pelo
+                        limpio no tendremos que bañarlo cada mes, también es importante cortarle el pelo o las uñas cuando haga falta, además de cuidarle
+                        los oídos o limpiarle la cara. Para que no reniegue es imprescindible que se sienta a gusto
+                        con la gente y deje que lo toques.</p>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                        <img src="{% static 'img/veterinaria-con-un-perro_1196-293.jpg'%}" alt="">
+                    </div>
+                    <h2>Veterinario</h2>
+                    <p>Uno de los cuidados más importantes es llevarlo al veterinario
+                        para que diseñe un plan de desparasitación, que impida la aparición de parásitos tanto a
+                        nivel interno como externo, ya sea con collar, pastillas y medicamentos necesarios.
+                        Las vacunas mantendrán al perro a salvo de enfermedades
+                        como el parvovirus o la hepatitis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <h5>¿Por qué adoptar un perro?</h5>
+    <div class="row">
+        <div class="single-features">
+            <div class="col-sm-12 wow fadeInLeft" >
+                <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <img src="{% static 'img/dosvidas.jpg'%}"   class="img-responsive" alt="">
+                    <h2>Salvas dos vidas</h2>
+                    <p style="font-size: 18px;">Millones de perros son sacrificados en los refugios debido a la sobrepoblación, mientras que aquellos que permanecen en las calles llevan una vida de miedo, hambre, frío y maltratos físicos. Mirarlos en ver reflejada la tristeza en sus caras.</p>
+                    <p style="font-size: 18px;">Adoptando a un perro callejero estarás salvando su vida, ofreciéndole una segunda oportunidad de tener un hogar y llevar una existencia digna y feliz. Pero además, permites que el espacio libre lo pueda ocupar un segundo perro, también a la espera de su familia perfecta. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-features">
+            <div class="col-xs-12 col-sm-12 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                <img src="{% static 'img/activo.jpg'%}"  class="img-responsive" alt="">
+                <h2>Te mantienen activo</h2>
+                <P style="font-size: 18px;">Pasar quince minutos paseando al perro o jugando con el gato es una buena manera de hacer ejercicio, de fortalecer el vínculo con tu mascota y, además, en el caso de los perros, te expone a socializar con otras personas.</P>
+            </div>
+        </div>
+
+        <div class="single-features">
+
+            <div class="col-sm-12 col-sm-offset-1 align-right wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                <img src="{% static 'img/amorperro.jpg'%}"  class="img-responsive" alt="">
+                <h2>Te brindan amor incondicional</h2>
+                <P style="font-size: 18px;">Pase lo que pase, tu mascota siempre estrará disponible para quererte y será la primera que se alegre cuando llegues a casa. El amor que brindan los animales es tan puro que solo querrás tenerlo cerca siempre.</P>
+            </div>
+        </div>
+
+        <div class="single-features">
+            <div class="col-sm-12 col-sm-offset-1 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                <img src="{% static 'img/amigo.jpg'%}"  class="img-responsive" alt="">
+                <h2>Ganas un amigo</h2>
+                <P style="font-size: 18px;">Si alguna vez te has sentido aislado, después de haber adoptado un perro nunca volverás a sentirte solo. El amor del perro no tiene fronteras, te acompañará en las buenas y en las malas, esperará por ti en la puerta todos los días y se solidarizará con tus emociones.</P>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center bottom-separator">
+                    <img src="" class="img-responsive inline" alt="">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="testimonial bottom">
+                        <h2>Testimonios</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Yo buscaba un perro con el que dar largos paseos
+                                y salir mucho a la calle, por lo que un animal joven,
+                                lleno de energía me parecía lo más adecuado.
+                                En realidad no me importaba la raza, sólo que fuera cariñoso y juguetón. No sólo es todo eso, sino que
+                                está bien educado y la dueña le enseñó bastantes
+                                cosas. En una semana se ha integrado en la familia perfectamente y ya es el rey de la casa y una
+                                alegría cada día. A él se le nota feliz y agradecido,
+                                con ganas de vivir a tope cada momento. Estamos
+                                todos muy agradecidos a los amigos de Fundación
+                                por cómo ha ido todo</blockquote>
+                                <h3><a href="#">- Anónimo</a></h3>
+                            </div>
+                         </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Un día antes de ingresar a la calle de mi casa lo vi,
+                                asustado y con carita de perdido, no sabía para donde tomar rumbo, me fui pero algo
+                                me llamó y regresé por él, lo adopté. Hoy en día es el perrito más tranquilo y cariñoso
+                                que pude haber tenido, y aunque mi gata le hace buylling, el nunca se enoja, bueno casi nunca.
+                                Siempre me recibe con aquella misma tierna mirada del día que lo rescaté.</blockquote>
+                                <h3><a href="">- Pao</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="contact-info bottom">
+                        <h2>Contactos</h2>
+                        <address>
+                        E-mail: <a href="#">poliperros@gmail.com</a> <br>
+                        </address>
+
+                        <h2>Ubicación</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.791473833189!2d-78.49087988574615!3d-0.21018669984664126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sEscuela+Polit%C3%A9cnica+Nacional!5e0!3m2!1ses!2sec!4v1519016949863"
+                                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="contact-form bottom">
+                        <h2>Send a message</h2>
+                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="copyright-text text-center" style="background-color:7DF2EF;">
+                        <p style="color:101F1E">&copy; EPN 2018</p>
+                        <p style="color:101F1E">Creado por <a target="_blank" href="">PoliPerros Team</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}
