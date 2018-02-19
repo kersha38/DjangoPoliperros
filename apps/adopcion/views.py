@@ -12,14 +12,14 @@ def index(request):
 
 class SolicitudList(ListView):
     model = Solicitud
-    template_name = 'usuario/home.html'
+    template_name = 'adopcion/solicitud_list.html'
 
 class SolicitudCreate(CreateView):
     model = Solicitud
     template_name = 'adopcion/solicitud_form.html'
     form_class = SolicitudForm
     second_form_class = PersonaForm
-    success_url = reverse_lazy('solicitudList')
+    success_url = reverse_lazy('principal')
 
     def get_context_data(self, **kwargs):
         context = super(SolicitudCreate, self).get_context_data(**kwargs)
