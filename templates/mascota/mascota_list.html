@@ -26,8 +26,10 @@
             <td>{{ mascota.estado_Actual }}</td>
             <td>{{ mascota.persona.nombre }} {{ mascota.persona.apellido }}</td>
             <td>
+
                 <a class="btn btn-primary" href="{% url 'mascotaEditar' mascota.id %}">Editar</a>
                 <a class="btn btn-danger" href="{% url 'mascotaEliminar' mascota.id %}">Eliminar</a>
+                <a class="btn btn-danger" href="{% url 'visitaCrear'%}">Agregar visita medica</a>
             </td>
         </tr>
         {% endfor %}

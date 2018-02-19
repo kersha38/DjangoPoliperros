@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table bordered">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Mascota</td>
+            <td>Fecha Visita</td>
+            <td>Diagnostico</td>
+            <td>Peso</td>
+            <td>Medicina Suministrada</td>
+        </tr>
+    <tbody>
+        {% if object_list %}
+        {% for visita in object_list %}
+        <tr>
+            <td>{{ visita.id }}</td>
+            <td>{{ visita.mascota.nombre }}</td>
+            <td>{{ visita.fecha }}</td>
+            <td>{{ visita.diagnostico }}</td>
+            <td>{{ visita.peso }}</td>
+            <td>{{ visita.medicina }}</td>
+             <td>
+
+                <a class="btn btn-primary" href="{% url 'visitaEditar' visita.id %}">Editar</a>
+                <a class="btn btn-danger" href="{% url 'visitaEliminar' visita.id %}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h1>No existen registros de mascotas</h1>
+        {% endif %}
+    </tbody>
+    </thead>
+
+</table>
+
+{% endblock %}
