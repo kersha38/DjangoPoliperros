@@ -2,8 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Title{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>POLIPERROS - {% block title %}Title{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.js'%}">
+
+    <link rel="stylesheet" href="{% static 'css/style_base.css'%}">
+
     {% block extrahead %}
         <!--Aqui los archivos css-->
     {% endblock %}
@@ -11,50 +16,76 @@
 <body>
 
 
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light" role="navigation" style="background-color: #8F99E8;">
+<div class="container-fluid" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/usuario/">
+        <img alt="Brand" src="{% static 'img/logo.png'%}" height=50% width=50%>
+      </a>
+    </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">PoliPerros</a>
+<ul class="nav nav-tabs"></ul>
+  <a class="navbar-brand" href="/usuario/">PoliPerros</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
     <span class="navbar-toggler-icon"></span>
+      <span class="sr-only">Desplegar navegación</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Adopciones<span class="sr-only">(current)</span></a>
-      </li>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav mr-auto">
       <li class="nav-item">
+        <a class="nav-link" href="#">Adopciones</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8000/galeria/">Galeria</a>
+      </li>
+
+      <li class="nav-item">
+
         <a class="nav-link" href="{% url 'galeria' %}">Galeria</a>
       </li>
+
       <li class="nav-item">
+
         <a class="nav-link" href="{% url 'quienes' %}">Quienes Somos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'contacto' %}">Contactenos</a>
+
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Buscar en Poliperros">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar en Poliperros" style="font-size: 16px;">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="font-size: 16px;">Buscar</button>
     </form>
   </div>
+</div>
 </nav>
-
+{% endblock %}
 {% block header %}
-<h4></h4>
 {% endblock %}
 
 {% block content %}
-<h5></h5>
+
+{% endblock %}
+
+{% block section %}
+
 {% endblock %}
 
 {% block footer %}
-<h6></h6>
+
 {% endblock %}
 
 {% block extrajs %}
         <!--Aqui los archivos js-->
 {% endblock %}
+
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
@@ -12,7 +12,6 @@ class RegistroUsuario(CreateView):
     form_class = RegistroForm
     success_url = reverse_lazy('registrarUsu')
 
-def cargarLogin(request):
-
-
-    return render_to_response('usuario/index.html',context_instance = RequestContext(request))
+def principal(request):
+    #return redirect('home')
+    return render_to_response('usuario/home.html', context_instance=RequestContext(request))
