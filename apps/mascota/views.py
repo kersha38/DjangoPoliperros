@@ -79,18 +79,20 @@ class VisitaCreate(CreateView):
     template_name = 'mascota/visita_medica.html'
     success_url = reverse_lazy('visitaListar') #es resolver de paginas, si fue bien  o no
 
-class VistasList(ListView):
-    model = Visita_Medica
-    template_name = 'mascota/visita_lista.html'
 
+def visita_list(request,id_visita):
+    visita = Visita_Medica.objects.filter(mascota_id=id_visita)
+    contexto = {'object_list': visita}
+    return render(request, 'mascota/visita_lista.html', contexto)
 
 class VisitaUpdate(UpdateView):
     model = Visita_Medica
     form_class = VisitaMedicaForm
     template_name = 'mascota/visita_medica.html'
-    success_url = reverse_lazy('visitaListar')
+    success_url = reverse_lazy('mascotaListar')
+
 
 class VisitaDelete(DeleteView):
     model = Visita_Medica
     template_name = 'mascota/visita_delete.html'
-    success_url = reverse_lazy('visitaListar')
+    success_url = reverse_lazy('mascotaListar')
