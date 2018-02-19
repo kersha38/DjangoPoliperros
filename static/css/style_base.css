@@ -1,0 +1,16 @@
+
+/*Agregamos margenes inferiores a los parrafos*/
+p {
+  margin-bottom: 20px;
+}
+
+.navbar {
+font-size: 19px;
+font-family: sans-serif;
+}
+
+.navbar-brand{
+    font-size: 22px;
+}
+
+
