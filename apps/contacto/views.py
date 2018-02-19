@@ -1,18 +1,20 @@
+from apps.contacto.forms import contactoForm
 from django.shortcuts import render, redirect
-from apps.contacto.forms import formularioContacto
+from django.http import HttpResponse
+from apps.contacto.models import formularioContacto
+
 
 # Create your views here.
 
 def contacto_view(request):
-    if request.method == 'POST':
-        form = formularioContacto(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request,'index.html')
-        else:
-            form = formularioContacto()
-            return render(request, 'contacto:contacto.html', {'form':form})
-
+	if request.method == 'POST':
+		form = contactoForm(request.POST)
+		if form.is_valid():
+			form.save()
+		return redirect('#')
+	else:
+		form = contactoForm()
+	return render(request, 'contacto/contacto.html', {'form':form})
 
 
 

@@ -1,17 +1,12 @@
 {% extends 'base/base.html' %}
-{% block title %}Registrar Usuario:3{% endblock %}
-{% block cabeza %}<h1>Solicitud Registro</h1>{% endblock %}
 
 {% block content %}
 <form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Enviar</button>
+	{% csrf_token %}
+	{{ form.as_p }}
 
+	<button type="submit">Enviar</button>
 </form>
-{% endblock %}
-
-{% block pie %}
 {% endblock %}
 
 
