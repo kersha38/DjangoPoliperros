@@ -4,6 +4,5 @@ from django.contrib.auth.views import login
 
 urlpatterns = [
     url(r'^registrar', RegistroUsuario.as_view(), name="registrarUsu"),
-    url(r'^$', principal),
-
+    url(r'^$', principal,name="principal"),
 ]

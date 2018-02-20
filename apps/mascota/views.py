@@ -77,7 +77,7 @@ class VisitaCreate(CreateView):
     model = Visita_Medica
     form_class = VisitaMedicaForm
     template_name = 'mascota/visita_medica.html'
-    success_url = reverse_lazy('visitaListar') #es resolver de paginas, si fue bien  o no
+    success_url = reverse_lazy('mascotaListar') #es resolver de paginas, si fue bien  o no
 
 
 def visita_list(request,id_visita):
@@ -96,3 +96,13 @@ class VisitaDelete(DeleteView):
     model = Visita_Medica
     template_name = 'mascota/visita_delete.html'
     success_url = reverse_lazy('mascotaListar')
+
+def visitamedica_crear(request):
+    if request.method=='POST':
+        form=VisitaMedicaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('mascotaListar')
+    else:
+        form=VisitaMedicaForm()
+    return render(request,'mascota/visita_medica.html',{'form':form})

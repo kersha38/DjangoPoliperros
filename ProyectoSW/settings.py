@@ -134,7 +134,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 
-LOGIN_REDIRECT_URL = reverse_lazy('solicitudList')
+LOGIN_REDIRECT_URL = reverse_lazy('principal')
+LOGOUT_REDIRECT_URL = reverse_lazy('principal')
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

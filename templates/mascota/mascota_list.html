@@ -1,7 +1,6 @@
 {% extends 'base/base.html' %}
-
 {% block content %}
-
+<a class="btn btn-danger" href="{% url 'mascotaCrear'%}">Anadir mascota</a>
 <table class="table table bordered">
     <thead>
         <tr>
@@ -31,6 +30,7 @@
                 <a class="btn btn-danger" href="{% url 'mascotaEliminar' mascota.id %}">Eliminar</a>
                 <a class="btn btn-danger" href="{% url 'visitaCrear'%}">Agregar visita medica</a>
                 <a class="btn btn-danger" href="{% url 'visitaListar' mascota.id %}">Ver historial médico</a>
+
             </td>
         </tr>
         {% endfor %}
